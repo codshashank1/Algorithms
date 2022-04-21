@@ -1,4 +1,7 @@
 //All insights to Binary Search
+// 1. Array MUST be sorted.
+// 2. The exit condition of the loop must be carefully scrutinized so that it is exhausted to only 1 element at maximum.
+// 3. Overflow issues with mid index calculation must be manipulated.
 
 //Basic Algorithm
 int binarySearch(int A[], int n, int x){
