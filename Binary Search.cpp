@@ -45,5 +45,34 @@ int binarySearch(int a[], int start, int end, int x){
         return binarySearch(a, mid + 1, end, x);     
 }
 
+//Finding the first occurence of the search element(eg. 10)
+//[2,4,5,6,7,7,7,7,10,10,10,10,10,10,10,10,10,10,20,30]
+int search1stPsn_Of_x(int a[],int n, int x)
+{
+    int low = 0, high = n - 1, mid;
+    int result = -1;
+    while(high >= low){
+        mid = low + (high - low) / 2;
+        if(x == a[mid]){
+            result = mid; // as of now, 
+            //the first position of x is at mid, found
+            //so far.
+            high = mid - 1; // to search in the leftside search space.
+        }
+        else if(x < a[mid]){
+            high = mid - 1;
+        }
+        else{
+            low = mid + 1;
+        }
+        return result;
+    }
+
+}
+// only one change needed to obtain the last occurence
+//of given x in the sorted array. 
+
+
+
 
 
